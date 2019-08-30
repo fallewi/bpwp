@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+        <record id="default_sendcloud_config" model="sendcloud.config">
+            <field name="select_default_local_shipment_method_id" eval="''"/>
+            <field name="select_default_international_shipment_method_id" eval="''"/>
+            <field name="default_label_request" eval="1"/>
+        </record>
+
+</odoo>

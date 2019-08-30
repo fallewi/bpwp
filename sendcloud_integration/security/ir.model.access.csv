@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sendcloud_shipment,sendcloud.shipment,model_sendcloud_shipment,,1,1,1,1
+access_shipment_value_prices,shipment.value.prices,model_shipment_value_prices,,1,1,1,1
+access_sendcloud_shipping_method,sendcloud.shipping.method,model_sendcloud_shipping_method,,1,1,1,1
+access_sendcloud_config,sendcloud.config,model_sendcloud_config,,1,1,1,1
+access_refresh_shipment_methods,refresh.shipment.methods,model_refresh_shipment_methods,,1,1,1,1
+access_sendcloud_wizard,sendcloud.wizard,model_sendcloud_wizard,,1,1,1,1
+access_ship_sendcloud_wizard,ship.sendcloud.wizard,model_ship_sendcloud_wizard,,1,1,1,1
+access_sc_mapping_config,sc.mapping.config,model_sc_mapping_config,,1,1,1,1

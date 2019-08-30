@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="send_tracking_number_to_customer" model="mail.template">
+            <field name="name">Send SendCloud Tracking Number To Customer</field>
+            <field name="email_from">${user.company_id.email or user.email}</field>
+            <field name="subject">SendCloud Tracking For ${object.name}</field>
+            <field name="model_id" ref="stock.model_stock_picking"/>
+            <field name="partner_to">${object.partner_id.id}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+                    <style>
+                        table {border-collapse: collapse; cellpadding: 15px;}
+                        table, th, td {border: 1px solid black;}
+                    </style>
+                    <p>Hello ${object.partner_id.name or ''},</p>
+                    <p>Tracking Detail:</p>
+                    <table width="100%" style="background-color:rgb(204,204,204);">
+                        <thead>
+                            <tr>
+                                <th width="30%" style="text-align: center;">WH Document</th>
+                                <th width="20%" style="text-align: center;">Origin</th>
+                                <th width="30%" style="text-align: center;">Tracking Number</th>
+                                <th width="20%" style="text-align: center;">Track Shipment</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table width="100%">
+                        <tr>
+                            <table width="100%" style="border: 0px;">
+                                <td width="30%" style="text-align: center;">
+                                    <span>${object.name}</span>
+                                </td>
+                                <td width="20%" style="text-align: center;">
+                                    <span>${object.origin or ''}</span>
+                                </td>
+                                <td width="30%" style="text-align: center;">
+                                    <span>${object.sendcloud_tracking_number or ''}</span>
+                                </td>
+                                <td width="20%" style="text-align: center;">
+                                    <span><a style="text-decoration: none;" href="${object.sendcloud_tracking_url}" target="_blank">TRACK NOW</a></span>
+                                </td>
+                            </table>
+                        </tr>
+                    </table>
+                    ]]>
+            </field>
+        </record>
+
+    </data>
+</odoo>

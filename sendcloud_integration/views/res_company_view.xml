@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sendcloud_integration" model="ir.ui.view">
+        <field name="name">res.company.form.sendcloud</field>
+        <field name="model">res.company</field>
+        <field name="priority">60</field>
+        <field name="inherit_id" ref="base.view_company_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="SendCloud Configuration">
+                    <group colspan="4">
+                        <field name="sendcloud_api_key" />
+                        <field name="sendcloud_secret_key" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="view_partner_form_streethouse" model="ir.ui.view">
+        <field name="name">res.partner.streetno</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('o_address_format')]//field[@name='street']"
+                position="after">
+                <field name="sc_street_number" class="o_address_street_number"
+                    placeholder="Number..."
+                    attrs="{'readonly': [('type', '=', 'contact'),('parent_id', '!=', False)]}" />
+            </xpath>
+
+            <xpath expr="//div[@name='div_address']//field[@name='street']"
+                position="after">
+                <field name="sc_street_number" class="o_address_street_number"
+                    placeholder="Number..." />
+            </xpath>
+
+            <xpath expr="//field[@name='child_ids']" position="attributes">
+                <attribute name="context">{'default_parent_id':
+                    active_id, 'default_sc_street_number':
+                    sc_street_number, 'default_street2': street2,
+                    'default_city': city, 'default_state_id': state_id,
+                    'default_zip': zip, 'default_country_id':
+                    country_id, 'default_supplier': supplier,
+                    'default_customer': customer}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_partner_address_streethouse" model="ir.ui.view">
+        <field name="name">res.partner.address.streetno</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_address_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[hasclass('o_address_format')]//field[@name='street']"
+                position="after">
+                <field name="sc_street_number" class="o_address_street_number"
+                    placeholder="Number..." />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

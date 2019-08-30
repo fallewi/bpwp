@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_stock_picking_sendcloud" model="ir.ui.view">
+        <field name="name">stock.picking.sendcloud</field>
+        <field name="model">stock.picking</field>
+        <field name="priority">60</field>
+        <field name="inherit_id" ref="delivery.view_picking_withcarrier_out_form" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="sync_sendcloud" readonly="1"
+                    attrs="{'invisible': [('picking_type_code', '!=', 'outgoing')]}" />
+            </field>
+            <group name="carrier_data" position="after">
+                <group name="sendcloud_delivery"
+                    attrs="{'invisible': [('sync_sendcloud', '=', False)]}">
+                    <field name="sendcloud_shipping_method_id"
+                        invisible="1" />
+                    <field name="sendcloud_shipping_method" />
+                    <field name="sendcloud_tracking_url"
+                        invisible="1" />
+                    <label for="sendcloud_tracking_number" />
+                    <div name="track_sendcloud">
+                        <field name="sendcloud_tracking_number"
+                            class="oe_inline"
+                            attrs="{'invisible': [('sync_sendcloud', '=', False)]}" />
+                        <button type='object' class="fa fa-arrow-right oe_link"
+                            name="open_sendcloud_tracking_url" string="Track Shipment"
+                            attrs="{'invisible': [('sendcloud_tracking_number', '=', False)]}" />
+                    </div>
+                </group>
+            </group>
+        </field>
+    </record>
+
+    <record id="view_picking_internal_search_sendcloud" model="ir.ui.view">
+        <field name="name">stock.picking.internal.sendcloud</field>
+        <field name="model">stock.picking</field>
+        <field name="priority">60</field>
+        <field name="inherit_id" ref="stock.view_picking_internal_search" />
+        <field name="arch" type="xml">
+            <filter name="late" position="before">
+                <filter name="synced_sendcloud" string="Synced to Sendcloud"
+                    domain="[('sync_sendcloud','=',True)]" help="Already synced orders to sendcloud" />
+                <separator />
+            </filter>
+        </field>
+    </record>
+</odoo>

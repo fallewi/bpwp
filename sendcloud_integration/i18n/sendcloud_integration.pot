@@ -1,0 +1,623 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sendcloud_integration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-09 03:35+0000\n"
+"PO-Revision-Date: 2018-12-09 03:35+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sendcloud_integration
+#: model:mail.template,body_html:sendcloud_integration.send_tracking_number_to_customer
+msgid "\n"
+"                    <style>\n"
+"                        table {border-collapse: collapse; cellpadding: 15px;}\n"
+"                        table, th, td {border: 1px solid black;}\n"
+"                    </style>\n"
+"                    <p>Hello ${object.partner_id.name or ''},</p>\n"
+"                    <p>Tracking Detail:</p>\n"
+"                    <table width=\"100%\" style=\"background-color:rgb(204,204,204);\">\n"
+"                        <thead>\n"
+"                            <tr>\n"
+"                                <th width=\"30%\" style=\"text-align: center;\">WH Document</th>\n"
+"                                <th width=\"20%\" style=\"text-align: center;\">Origin</th>\n"
+"                                <th width=\"30%\" style=\"text-align: center;\">Tracking Number</th>\n"
+"                                <th width=\"20%\" style=\"text-align: center;\">Track Shipment</th>\n"
+"                            </tr>\n"
+"                        </thead>\n"
+"                    </table>\n"
+"                    <table width=\"100%\">\n"
+"                        <tr>\n"
+"                            <table width=\"100%\" style=\"border: 0px;\">\n"
+"                                <td width=\"30%\" style=\"text-align: center;\">\n"
+"                                    <span>${object.name}</span>\n"
+"                                </td>\n"
+"                                <td width=\"20%\" style=\"text-align: center;\">\n"
+"                                    <span>${object.origin or ''}</span>\n"
+"                                </td>\n"
+"                                <td width=\"30%\" style=\"text-align: center;\">\n"
+"                                    <span>${object.sendcloud_tracking_number or ''}</span>\n"
+"                                </td>\n"
+"                                <td width=\"20%\" style=\"text-align: center;\">\n"
+"                                    <span><a style=\"text-decoration: none;\" href=\"${object.sendcloud_tracking_url}\" target=\"_blank\">TRACK NOW</a></span>\n"
+"                                </td>\n"
+"                            </table>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"                    \n"
+"            "
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/refresh_shipment_methods.py:27
+#, python-format
+msgid " Please check your internet connection."
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/models/sendcloud.py:70
+#, python-format
+msgid " Please put country on customer form."
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_res_company__sendcloud_api_key
+msgid "API Key"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_picking_internal_search_sendcloud
+msgid "Already synced orders to sendcloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_config
+msgid "Apply"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_sm_refresh_form
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.ship_sendcloud_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__carrier
+msgid "Carrier"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_wizard_form
+msgid "Close"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.ui.menu,name:sendcloud_integration.menu_sendcloud_config
+msgid "Configuration"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_config
+msgid "Configure Sendcloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__name
+msgid "Country Name"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__create_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__create_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__default_label_request
+msgid "Default Label Request"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,help:sendcloud_integration.field_ship_sendcloud_wizard__no_label_request
+msgid "Default=1, it means single shipment send single request to sendcloud,       if you select > 1 then multiple request would be generate on sendcloud        for same shipment,\n"
+"Reason: Sendcloud does not support       multi labels for single shipment"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,help:sendcloud_integration.field_sendcloud_config__default_label_request
+msgid "Default=1, it means single shipment send single request to sendcloud,       if you select > 1 then multiple request would be generate on sendcloud        for same shipment,\n"
+"Reason: Sendcloud does not support       multi labels for single shipment."
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:106
+#, python-format
+msgid "Delivery method not found for picking(%s)!"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__display_name
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_sm_refresh_form
+msgid "Do you really want to refresh shipping methods?"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.ship_sendcloud_wizard_form
+msgid "Do you really want to sync outgoing picking to sendcloud?"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_res_partner__sc_street_number
+msgid "House No."
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__id
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__id
+msgid "ID"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__no_label_request
+msgid "Label Request"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:35
+#, python-format
+msgid "Label request should be > 0"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard____last_update
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__write_uid
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_refresh_shipment_methods__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_ship_sendcloud_wizard__write_date
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__mapping_ids
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_config
+msgid "Mapping"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_config
+msgid "Mapping Delivery Methods"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:113
+#, python-format
+msgid "Mapping not found for Delivery method(%s)!\n"
+"Please            navigate to Inventory > Sendcloud > Configuration,             then map odoo delivery method to sendcloud shipment              method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__max_weight
+msgid "Max Weight"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_wizard__text
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_wizard_form
+msgid "Message"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__min_weight
+msgid "Min Weight"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:29
+#, python-format
+msgid "No SendCloud API Key missing, Kindly                put SendCloud API Key in Company Form"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:32
+#, python-format
+msgid "No SendCloud Secret Key missing, Kindly                put SendCloud Secret Key in Company Form"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:132
+#, python-format
+msgid "No customer country found for(%s)"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_partner_address_streethouse
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_partner_form_streethouse
+msgid "Number..."
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__odoo_delivery_method_id
+msgid "Odoo Delivery Method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__name
+msgid "Odoo ID"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__stock_picking_id
+msgid "Odoo Shipment"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:57
+#, python-format
+msgid "Only Outgoing picking                 would be sync to sendcloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__outside_countries
+msgid "Outside Europe Countries"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:117
+#, python-format
+msgid "Please configure proper shipping method from configuration menu, please go to                         Inventory > Sendcloud > Configuration,                        then set proper shipment method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:139
+#, python-format
+msgid "Please mention house no on customer(%s)                         address.\n"
+" Please go to customer form                         then update house no."
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__price
+msgid "Price"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,help:sendcloud_integration.field_sendcloud_config__outside_countries
+msgid "Put here outside europe countries so when sync order it will sync a more information from order "
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.actions.act_window,name:sendcloud_integration.sendcloud_sm_refresh_actions
+#: model:ir.ui.menu,name:sendcloud_integration.menu_sendcloud_sm_refresh
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_sm_refresh_form
+msgid "Refresh Shipping Methods"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_res_company__sendcloud_secret_key
+msgid "Secret Key"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.ui.menu,name:sendcloud_integration.menu_sendcloud
+msgid "SendCloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_integration
+msgid "SendCloud Configuration"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_config
+msgid "SendCloud Default Configuration"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.actions.act_window,name:sendcloud_integration.action_sendcloud_shipment
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_methods_tree
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_tree
+msgid "SendCloud Shipments"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_stock_picking__sendcloud_shipping_method_id
+msgid "SendCloud Shipping ID"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_stock_picking__sendcloud_shipping_method
+msgid "SendCloud Shipping Method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:mail.template,subject:sendcloud_integration.send_tracking_number_to_customer
+msgid "SendCloud Tracking For ${object.name}"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_stock_picking__sendcloud_tracking_number
+msgid "SendCloud Tracking Number"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_stock_picking__sendcloud_tracking_url
+msgid "SendCloud Tracking Url"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_form
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_methods
+msgid "Sendcloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__sendclould_config_id
+msgid "Sendcloud Config"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.actions.act_window,name:sendcloud_integration.action_sendcloud_config
+msgid "Sendcloud Configuration"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipment__shipment_id
+msgid "Sendcloud ID"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sc_mapping_config__sendclould_shipping_method_id
+msgid "Sendclould Shipping Method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/models/sendcloud.py:135
+#, python-format
+msgid "Shipment %s Already synced                with SendCloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_methods
+msgid "Shipment Method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__shipping_method_id
+msgid "Shipment Method ID"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.ui.menu,name:sendcloud_integration.menu_sendcloud_shipments
+msgid "Shipments"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.actions.act_window,name:sendcloud_integration.view_sendcloud_shipment_methods_action
+#: model:ir.ui.menu,name:sendcloud_integration.menu_sendcloud_shipment_methods
+msgid "Shipments Methods"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_methods
+msgid "Shipping Method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_sendcloud_shipment_methods
+msgid "Shipping Method With Prices"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__shipping_value_ids
+msgid "Shipping Price/Data"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/wizard/synchronization_wizard.py:128
+#, python-format
+msgid "Shipping method cannot allow                         customer country code for(%s), please go                         Inventory > Sendcloud > Configuration,                        add customer country to related shipment method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.ship_sendcloud_wizard_form
+msgid "Sync To SendCloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_stock_picking__sync_sendcloud
+msgid "Synced to SendCloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_picking_internal_search_sendcloud
+msgid "Synced to Sendcloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.ship_sendcloud_wizard_form
+msgid "Synchronize Shippings"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.actions.act_window,name:sendcloud_integration.action_sendcloud_wizard_open
+msgid "Synchronize To SendCloud"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.view_stock_picking_sendcloud
+msgid "Track Shipment"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_config__send_email_to_customer
+msgid "Would you like to send an email to customer with tracking number ?"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/models/sendcloud.py:234
+#, python-format
+msgid "Your delivery method has no redirect on courier provider's website to track this order."
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_sm_refresh_form
+msgid "_Refresh"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_shipment_value_prices__carrier_id
+msgid "carrier"
+msgstr ""
+
+#. module: sendcloud_integration
+#: code:addons/sendcloud_integration/models/sendcloud.py:176
+#: code:addons/sendcloud_integration/models/sendcloud.py:217
+#, python-format
+msgid "error"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.sendcloud_sm_refresh_form
+#: model_terms:ir.ui.view,arch_db:sendcloud_integration.ship_sendcloud_wizard_form
+msgid "or"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_refresh_shipment_methods
+msgid "refresh.shipment.methods"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_sc_mapping_config
+msgid "sc.mapping.config"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_sendcloud_config
+msgid "sendcloud.config"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_sendcloud_shipment
+msgid "sendcloud.shipment"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_sendcloud_shipping_method
+msgid "sendcloud.shipping.method"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_sendcloud_wizard
+msgid "sendcloud.wizard"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_ship_sendcloud_wizard
+msgid "ship.sendcloud.wizard"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model,name:sendcloud_integration.model_shipment_value_prices
+msgid "shipment.value.prices"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__shipping_id
+msgid "shipping ID"
+msgstr ""
+
+#. module: sendcloud_integration
+#: model:ir.model.fields,field_description:sendcloud_integration.field_sendcloud_shipping_method__name
+msgid "shipping Name"
+msgstr ""
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sendcloud_sm_refresh_form" model="ir.ui.view">
+        <field name="name">refresh.shipment.methods</field>
+        <field name="model">refresh.shipment.methods</field>
+        <field name="arch" type="xml">
+            <form string="Refresh Shipping Methods">
+                <group string="Do you really want to refresh shipping methods?" />
+                <footer>
+                    <button name="refresh" string="_Refresh"
+                        type="object" class="oe_highlight" />
+                    or
+                    <button string="Cancel" class='oe_link'
+                        special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="sendcloud_sm_refresh_actions" model="ir.actions.act_window">
+        <field name="name">Refresh Shipping Methods</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">refresh.shipment.methods</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="sendcloud_sm_refresh_form" />
+        <field name="target">new</field>
+    </record>
+
+</odoo>

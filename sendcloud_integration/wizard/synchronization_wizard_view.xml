@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ship_sendcloud_wizard_form" model="ir.ui.view">
+        <field name="name">Synchronization Wizard</field>
+        <field name="model">ship.sendcloud.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Synchronize Shippings">
+                <group
+                    string="Do you really want to sync outgoing picking to sendcloud?">
+                    <field name="no_label_request" required="1"
+                        invisible="1" />
+                </group>
+                <footer>
+                    <button name="synchronize" string="Sync To SendCloud"
+                        type="object" class="oe_highlight" />
+                    or
+                    <button string="Cancel" class='oe_link'
+                        special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="action_sendcloud_wizard_open" name="Synchronize To SendCloud"
+        res_model="ship.sendcloud.wizard" src_model="stock.picking"
+        view_mode="form" target="new" key2="client_action_multi" />
+</odoo>
